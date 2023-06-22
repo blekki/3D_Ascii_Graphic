@@ -23,10 +23,10 @@ float global_matrix[4][4] = {{1,0,0,0},
 //розмір реєстра
 // const int SizeOfRegister = 4;
 //реєстр точок
-const float Register[4][4] = {{-10, 10, 0, 0},
-                              {10, 10, 0, 0},
-                              {25, 0, 0, 0},
-                              {-25, 0, 0, 0}};
+const float Register[4][4] = {{-8, 4, 0, 0},
+                              {15, 12, 0, 0},
+                              {5, -9, 0, 0}};
+                              //{-25, 0, 0, 0}};
 //множенн матриць
 // int Matrixs(int X, int Y, int Z)
 int Matrixs(float basic_matrix[])
@@ -201,7 +201,7 @@ int print_line(float OnePoint[], float TwoPoint[])
         int x = CoefX(l * x_dis / length_line + round(OnePoint[0]));
         int y = CoefY(l * y_dis / length_line + round(OnePoint[1]));
         //printf("((%d : %d))\n", x, y);
-        mas[x][y] = '@'; //49 + CH; - комент для перевірки послідовності малювання ліній
+        mas[x][y] = '#'; //49 + CH; - комент для перевірки послідовності малювання ліній
     }
     CH++;
 
@@ -245,7 +245,7 @@ int main(int argc, char **argv)
     print_line(Reg0, Reg1);
 
 
-    print_point(0,0,'+');
+    //print_point(0,0,'+');
     //print_circle(8);
 
     get_screen();
